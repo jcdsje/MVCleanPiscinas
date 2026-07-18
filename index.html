@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piscinas MV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav.menu {
+      background: #0077b6;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    nav.menu button {
+      background: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .pagina {
+      display: none;
+      padding: 20px;
+    }
+    .pagina.ativa {
+      display: block;
+    }
+    .logo {
+      max-width: 200px;
+      margin-top: 20px;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 8px;
+      flex: 1 1 200px;
+    }
+    .user-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .logo-contato {
+      max-width: 100px;
+      border-radius: 50%;
+    }
+    .social-links {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .social-icon {
+      font-size: 20px;
+      color: #0077b6;
+      text-decoration: none;
+    }
+    body.dark {
+      background: #222;
+      color: #eee;
+    }
+    body.dark nav.menu {
+      background: #333;
+    }
+    body.dark nav.menu button {
+      background: #444;
+      color: #eee;
+    }
+    body.dark .card, body.dark .user-card {
+      background: #333;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <!-- Menu -->
+  <nav class="menu">
+    <button data-pagina="home">Home</button>
+    <button data-pagina="servicos">Serviços</button>
+    <button data-pagina="contatos">Contatos</button>
+    <button onclick="dark()">Alternar</button>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="pagina ativa">
+    <h1>Serviço Especializado em Limpeza de Piscinas</h1>
+    <img src="logo.jpeg" alt="Logo MV" class="logo">
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="pagina">
+    <h2>Por que fazer a limpeza preventiva da piscina?</h2>
+    <div class="card-container">
+      <div class="card"><h3>💧 Saúde</h3><p>Evita proliferação de bactérias e fungos.</p></div>
+      <div class="card"><h3>🌞 Estética</h3><p>Garante água cristalina e agradável.</p></div>
+      <div class="card"><h3>⚙️ Durabilidade</h3><p>Previne danos em filtros e bombas.</p></div>
+      <div class="card"><h3>💰 Economia</h3><p>Reduz custos futuros com reparos.</p></div>
+    </div>
+    <div class="carousel" id="carousel"></div>
+  </section>
+
+  <!-- Contatos -->
+  <section id="contatos" class="pagina">
+    <h2>Contatos</h2>
+    <div class="user-card">
+      <img src="logo.jpeg" alt="Logo MV" class="logo-contato">
+      <div class="user-info">
+        <h2>MVClean Piscinas</h2>
+        <p>Entre em contato conosco</p>
+        <div class="social-links">
+          <a href="https://facebook.com/seuPerfil" class="social-icon facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/mvcleanpiscinas?utm_source=qr&igsh=cmZpYnRja2hwZjVr" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/5531996091856" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const botoes = document.querySelectorAll("nav button[data-pagina]");
+      const paginas = document.querySelectorAll(".pagina");
+
+      botoes.forEach(botao => {
+        botao.addEventListener("click", () => {
+          const alvo = botao.getAttribute("data-pagina");
+          paginas.forEach(pagina => pagina.classList.remove("ativa"));
+          document.getElementById(alvo).classList.add("ativa");
+        });
+      });
+    });
+
+    function dark() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>

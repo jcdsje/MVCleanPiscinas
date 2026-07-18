@@ -1,0 +1,131 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.modo-claro { background-color: black; color: white; }
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background: #0056b3;
+  padding: 10px;
+}
+
+.menu button {
+  background: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.menu button:hover { background: #e0e0e0; }
+
+.pagina { display: none; padding: 20px; }
+.pagina.ativa { display: block; }
+
+.logo { max-width: 90%; height: auto; border-radius: 10px; }
+
+/* Contatos - imagem proporcional ao card */
+.logo-contato {
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  border-radius: 0; /* sem arredondar */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card:hover { transform: scale(1.05); }
+
+.carousel {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.carousel img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.carousel img:hover { transform: scale(1.05); }
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  max-width: 400px;
+  margin: auto;
+}
+
+.user-info h2, .user-info p { margin: 10px 0; }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; height: 50px;
+  background-color: #ccc;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.social-icon:hover { opacity: 0.7; transform: scale(1.1); }
+
+.facebook { background-color: #0056b3; }
+.instagram { background-color: #e1306c; }
+.whatsapp { background-color: #25D366; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card { width: 100%; }
+  .menu { flex-direction: column; }
+  .user-card { max-width: 90%; }
+  .logo { max-width: 100%; }
+  .carousel img { width: 100%; max-width: 300px; height: auto; }
+}
