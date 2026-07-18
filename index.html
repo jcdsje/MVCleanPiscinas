@@ -55,14 +55,32 @@
       border-radius: 8px;
       flex: 1 1 200px;
     }
-    .user-card {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: #f1f1f1;
-      padding: 20px;
-      border-radius: 8px;
-    }
+   .user-card {
+  display: flex;
+  flex-direction: column; /* empilha imagem e texto */
+  align-items: center;    /* centraliza tudo */
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 0 auto;         /* centraliza o card na tela */
+}
+
+.logo-contato {
+  width: 250px;           /* maior e chamativa */
+  height: 250px;          /* quadrada */
+  object-fit: cover;      /* mantém proporção sem distorcer */
+  border-radius: 10px;    /* cantos arredondados */
+  margin-bottom: 15px;    /* espaço entre imagem e texto */
+}
+
+@media (max-width: 768px) {
+  .logo-contato {
+    width: 100%;
+    height: auto;         /* em celular ocupa toda a largura */
+  }
+}
+
    .logo-contato {
   display: block;
   margin: 0 auto;     /* centraliza */
@@ -149,7 +167,7 @@
 
   <!-- Contatos -->
 
-  <!-- Contatos -->
+<!-- Contatos -->
 <section id="contatos" class="pagina">
   <h2>Contatos</h2>
   <div class="user-card">
@@ -165,6 +183,7 @@
     </div>
   </div>
 </section>
+
 
 
   <script>
