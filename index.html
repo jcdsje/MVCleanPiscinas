@@ -57,55 +57,53 @@
     }
 .user-card {
   display: flex;
-  flex-direction: column; /* imagem em cima, texto embaixo */
+  flex-direction: column;
   align-items: center;
-  background: #f1f1f1;
-  padding: 20px;
-  border-radius: 8px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 500px;
-  margin: 0 auto; /* centraliza o card */
+  margin: 0 auto;
 }
 
 .logo-contato {
-  width: 280px;       /* maior e chamativa */
-  height: 280px;      /* quadrada */
-  object-fit: cover;  /* mantém proporção sem distorcer */
-  border-radius: 10px;
-  margin-bottom: 15px;
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 768px) {
-  .logo-contato {
-    width: 100%;
-    height: auto;     /* em celular ocupa toda a largura */
-  }
+.user-info h2 {
+  margin: 10px 0;
+  font-size: 1.8em;
+  color: #0077b6;
 }
 
-
-
-.logo-contato {
-  width: 250px;           /* maior e chamativa */
-  height: 250px;          /* quadrada */
-  object-fit: cover;      /* mantém proporção sem distorcer */
-  border-radius: 10px;    /* cantos arredondados */
-  margin-bottom: 15px;    /* espaço entre imagem e texto */
+.user-info p {
+  margin: 5px 0;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .logo-contato {
-    width: 100%;
-    height: auto;         /* em celular ocupa toda a largura */
-  }
+.regioes {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
 }
 
-   .logo-contato {
-  display: block;
-  margin: 0 auto;     /* centraliza */
-  width: 200px;       /* tamanho fixo quadrado */
-  height: 200px;      /* altura igual à largura */
-  object-fit: cover;  /* garante proporção sem distorcer */
-  border-radius: 10px; /* quadrado com cantos levemente arredondados */
+.regioes li {
+  margin: 3px 0;
 }
+
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
 
     .social-links {
       margin-top: 10px;
@@ -185,23 +183,29 @@
   <!-- Contatos -->
 
 <!-- Contatos -->
-<!-- Contatos -->
 <section id="contatos" class="pagina">
   <h2>Contatos</h2>
   <div class="user-card">
     <img src="logo.jpeg" alt="Logo MV" class="logo-contato">
     <div class="user-info">
       <h2>MVClean Piscinas</h2>
-      <p>Entre em contato conosco</p>
-      <p><strong>Regiões de atuação:</strong> Betim, São Joaquim de Bicas e Igarapé</p>
+      <p>💦 Limpeza e manutenção profissional de piscinas</p>
+      <p><strong>Regiões de atuação:</strong></p>
+      <ul class="regioes">
+        <li>Betim</li>
+        <li>São Joaquim de Bicas</li>
+        <li>Igarapé</li>
+      </ul>
+      <p><strong>📞 Telefone:</strong> (31) 99609-1856</p>
       <div class="social-links">
         <a href="https://facebook.com/seuPerfil" class="social-icon facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/mvcleanpiscinas?utm_source=qr&igsh=cmZpYnRja2hwZjVr" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/mvcleanpiscinas" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://wa.me/5531996091856" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
