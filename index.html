@@ -38,7 +38,10 @@
       width: 800px;        /* largura maior */
       max-width: 100%;     /* responsivo em telas menores */
       height: auto;
-      border-radius: 10px; /* opcional */
+      border-radius: 10px;
+    }
+    h1{
+      text-align:center;
     }
     .card-container {
       display: flex;
@@ -74,6 +77,22 @@
       color: #0077b6;
       text-decoration: none;
     }
+    .carousel {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .carousel img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .carousel img:hover { transform: scale(1.05); }
     body.dark {
       background: #222;
       color: #eee;
@@ -115,7 +134,12 @@
       <div class="card"><h3>⚙️ Durabilidade</h3><p>Previne danos em filtros e bombas.</p></div>
       <div class="card"><h3>💰 Economia</h3><p>Reduz custos futuros com reparos.</p></div>
     </div>
-    <div class="carousel" id="carousel"></div>
+    <!-- Carrossel com fotos das piscinas -->
+    <div class="carousel" id="carousel">
+      <img src="limpinha.jpg" alt="Piscina limpa">
+      <img src="piscinalimpa.jpeg" alt="Piscina cristalina">
+      <img src="piscinaimunda.jpeg" alt="Piscina suja antes da limpeza">
+    </div>
   </section>
 
   <!-- Contatos -->
